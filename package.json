@@ -1,9 +1,12 @@
 {
-  "name": "nature_republic",
+  "name": "nature-republic",
   "version": "0.1.0",
   "main": "src/index.tsx",
   "private": true,
-  "author": "hayoung",
+  "author": {
+    "name": "Ha Young, Kim",
+    "url": "https://github.com/hayoung-jeremy/nature-republic"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
