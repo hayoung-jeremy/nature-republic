@@ -12,6 +12,7 @@ const StyledSectionTemplate = styled.section`
   }
   & h2.title {
     font-size: 20px;
+    font-weight: 500;
   }
   & .inner {
     width: 1200px;
