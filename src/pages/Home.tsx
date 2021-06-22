@@ -1,7 +1,8 @@
 import React from "react";
+import { HeaderContainer } from "containers";
 
 const Home = () => {
-  return <div>메인 화면</div>;
+  return <HeaderContainer />;
 };
 
 export default Home;
