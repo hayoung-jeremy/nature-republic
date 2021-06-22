@@ -9,7 +9,6 @@ import "assets/styles/main.scss";
 
 // Provider from react-redux,
 // store,
-// main.scss
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const StyledSectionTemplate = styled.section`
@@ -20,10 +20,10 @@ const StyledSectionTemplate = styled.section`
 `;
 
 interface SectionProps {
-  children: ReactNode;
+  children?: React.ReactNode;
   hasInner?: boolean;
   isH2Blind?: boolean;
-  h2Content: string;
+  h2Content?: string;
 }
 
 const SectionTemplate = ({
