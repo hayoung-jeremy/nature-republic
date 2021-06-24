@@ -5,6 +5,7 @@ const StyledHeader = styled.header`
   position: relative;
   & h1 {
     font-size: 32px;
+    font-weight: 200;
   }
   & .inner {
     display: flex;
