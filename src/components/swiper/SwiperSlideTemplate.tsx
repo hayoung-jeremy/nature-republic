@@ -14,7 +14,7 @@ interface Props {
   navigation?: boolean;
   loop?: boolean;
   autoplay?: boolean;
-  data?: any;
+  data: any[];
   effect?: "slide" | "fade" | "cube" | "coverflow" | "flip";
   virtual?: boolean;
 }
@@ -31,16 +31,7 @@ const SwiperSlideTemplate = ({
   effect,
   virtual,
   ...rest
-}: Props) => {
-  console.log(data);
-  const swiperContents = data.map((item: any, index: number) => {
-    return (
-      <SwiperSlide key={item.id} virtualIndex={index} className="swiper-slide">
-        <img src={item.url} alt={item.alt} />
-      </SwiperSlide>
-    );
-  });
-  console.log(swiperContents);
+}: Props): void | any => {
   return (
     <Swiper
       style={style}
@@ -54,7 +45,13 @@ const SwiperSlideTemplate = ({
       virtual={virtual}
       {...rest}
     >
-      {swiperContents}
+      {data.map((item, index) => {
+        return (
+          <SwiperSlide key={item.id} virtualIndex={index}>
+            <img src={item.url} alt={item.alt} />
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 };
