@@ -1,19 +1,41 @@
 import React from "react";
+// swiper :
+import SwiperCore, { Navigation, Pagination, Virtual } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/pagination/pagination.scss";
 
 // custom :
-import { SectionTemplate } from "components";
-import { SwiperSlideTemplate } from "components";
 import bannerImages from "db/bannerImages.json";
+import { SectionTemplate } from "components";
+import { SwiperTemplate } from "components";
+
+SwiperCore.use([Virtual, Navigation, Pagination]);
 
 const HomeContainer = () => {
-  console.log(bannerImages);
   return (
     <>
-      <SectionTemplate hasInner h2Content="main banner"></SectionTemplate>
-      <SectionTemplate hasInner h2Content="신제품 & 베스트셀러">
-        <SwiperSlideTemplate
+      <SectionTemplate hasInner h2Content="main banner">
+        <Swiper
           slidesPerView={1}
+          virtual
+          pagination={{ clickable: true }}
+          navigation
+        >
+          {bannerImages.map((item, index) => {
+            return (
+              <SwiperSlide key={item.id} virtualIndex={index}>
+                <img src={item.url} alt={item.alt} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </SectionTemplate>
+      <SectionTemplate hasInner h2Content="신제품 & 베스트셀러">
+        <SwiperTemplate
           data={bannerImages}
+          slidesPerView={1}
           virtual
           pagination={{ clickable: true }}
           navigation

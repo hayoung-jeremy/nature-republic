@@ -1,1 +1,1 @@
-export { default } from "./SwiperSlideTemplate";
+export { default } from "./SwiperTemplate";
