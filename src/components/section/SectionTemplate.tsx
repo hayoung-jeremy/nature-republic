@@ -1,7 +1,31 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const StyledSectionTemplate = styled.section`
+interface SectionProps {
+  children?: React.ReactNode;
+  hasInner?: boolean;
+  isH2Blind?: boolean;
+  h2Content?: string;
+  grayBackground?: boolean;
+}
+
+const StyledSectionTemplate = styled.section<SectionProps>`
+  // section
+  &:not(:first-of-type) {
+    margin-top: 60px;
+  }
+  ${(props) =>
+    props.grayBackground
+      ? css`
+          background-color: #f1f1f1;
+        `
+      : null}
+  // inner
+  & .inner {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  // h2
   & h2.blind {
     position: absolute;
     left: -9999rem;
@@ -13,29 +37,20 @@ const StyledSectionTemplate = styled.section`
   & h2.title {
     font-size: 20px;
     font-weight: 500;
-  }
-  & .inner {
-    width: 1200px;
-    margin: 0 auto;
+    margin-bottom: 20px;
   }
 `;
-
-interface SectionProps {
-  children?: React.ReactNode;
-  hasInner?: boolean;
-  isH2Blind?: boolean;
-  h2Content?: string;
-}
 
 const SectionTemplate = ({
   children,
   hasInner,
   isH2Blind,
   h2Content,
+  grayBackground,
   ...rest
 }: SectionProps) => {
   return (
-    <StyledSectionTemplate>
+    <StyledSectionTemplate grayBackground={grayBackground}>
       {hasInner ? (
         <div className="inner">
           <h2 className={isH2Blind ? "blind" : "title"}>{h2Content}</h2>

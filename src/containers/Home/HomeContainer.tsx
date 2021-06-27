@@ -14,7 +14,7 @@ SwiperCore.use([Virtual, Navigation, Pagination]);
 const HomeContainer = () => {
   return (
     <>
-      <SectionTemplate hasInner h2Content="main banner">
+      <SectionTemplate hasInner h2Content="main banner" isH2Blind>
         <Swiper
           slidesPerView={1}
           virtual
@@ -33,6 +33,7 @@ const HomeContainer = () => {
       <SectionTemplate
         hasInner
         h2Content="신제품 & 베스트셀러"
+        grayBackground
       ></SectionTemplate>
       <SectionTemplate hasInner h2Content="추천 카테고리"></SectionTemplate>
       <SectionTemplate hasInner h2Content="EVENT"></SectionTemplate>
