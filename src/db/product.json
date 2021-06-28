@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "productName": "네이처 3중구조 건강마스크 1BOX(50매)",
+    "productThumbnailUrl": "/images/newItem/new_item1.png",
+    "costPrice": 9900,
+    "discountPrice": "",
+    "discountRate": "",
+    "isNew": true,
+    "isBest": false,
+    "isOnSale": false
+  },
+  {
+    "id": 2,
+    "productName": "히알론 액티브 10 폼 클렌저",
+    "productThumbnailUrl": "/images/newItem/new_item2.png",
+    "costPrice": 15400,
+    "discountPrice": 7700,
+    "discountRate": 50,
+    "isNew": true,
+    "isBest": false,
+    "isOnSale": true
+  },
+  {
+    "id": 3,
+    "productName": "블랙빈 안티 헤어로스 샴푸 (체험분 3매 증정)",
+    "productThumbnailUrl": "/images/newItem/new_item3.png",
+    "costPrice": 9900,
+    "discountPrice": "",
+    "discountRate": "",
+    "isNew": false,
+    "isBest": true,
+    "isOnSale": false
+  },
+  {
+    "id": 4,
+    "productName": "그린더마 마일드 시카 빅선쿠션 SPF50+PA++++",
+    "productThumbnailUrl": "/images/newItem/new_item4.png",
+    "costPrice": 25900,
+    "discountPrice": 12900,
+    "discountRate": 50,
+    "isNew": true,
+    "isBest": false,
+    "isOnSale": true
+  },
+  {
+    "id": 5,
+    "productName": "캘리포니아 알로에 점보 선로션 SPF50+ PA++++",
+    "productThumbnailUrl": "/images/newItem/new_item5.png",
+    "costPrice": 18900,
+    "discountPrice": 13900,
+    "discountRate": 50,
+    "isNew": false,
+    "isBest": false,
+    "isOnSale": true
+  },
+  {
+    "id": 6,
+    "productName": "[1+1] 캘리포니아 알로에 아이스 퍼프선 SPF50+ PA++++",
+    "productThumbnailUrl": "/images/newItem/new_item6.png",
+    "costPrice": 19900,
+    "discountPrice": "",
+    "discountRate": "",
+    "isNew": true,
+    "isBest": false,
+    "isOnSale": false
+  }
+]

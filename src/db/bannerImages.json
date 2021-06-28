@@ -1,5 +1,13 @@
 [
-  { "id": 1, "url": "/images/banner_01.jpg", "alt": "메인배너 1" },
-  { "id": 2, "url": "/images/banner_02.jpg", "alt": "메인배너 2" },
-  { "id": 3, "url": "/images/banner_03.jpg", "alt": "메인배너 3" }
+  {
+    "id": 1,
+    "url": "/images/mainBanner/main_banner1.png",
+    "alt": "메인배너 1"
+  },
+  {
+    "id": 2,
+    "url": "/images/mainBanner/main_banner2.png",
+    "alt": "메인배너 2"
+  },
+  { "id": 3, "url": "/images/mainBanner/main_banner3.png", "alt": "메인배너 3" }
 ]
