@@ -24,6 +24,8 @@ const StyledSectionTemplate = styled.section<SectionProps>`
   & .inner {
     width: 1200px;
     margin: 0 auto;
+    padding: 80px 0;
+    position: relative;
   }
   // h2
   & h2.blind {
