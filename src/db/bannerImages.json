@@ -1,13 +1,17 @@
 [
   {
     "id": 1,
-    "url": "/images/mainBanner/main_banner1.png",
+    "url": "/assets/images/mainBanner/main-banner-1.png",
     "alt": "메인배너 1"
   },
   {
     "id": 2,
-    "url": "/images/mainBanner/main_banner2.png",
+    "url": "/assets/images/mainBanner/main-banner-2.png",
     "alt": "메인배너 2"
   },
-  { "id": 3, "url": "/images/mainBanner/main_banner3.png", "alt": "메인배너 3" }
+  {
+    "id": 3,
+    "url": "/assets/images/mainBanner/main-banner-3.png",
+    "alt": "메인배너 3"
+  }
 ]

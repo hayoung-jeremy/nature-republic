@@ -2,7 +2,7 @@
   {
     "id": 1,
     "productName": "네이처 3중구조 건강마스크 1BOX(50매)",
-    "productThumbnailUrl": "/images/newItem/new_item1.png",
+    "productThumbnailUrl": "../assets/images/newItem/new_item1.png",
     "costPrice": 9900,
     "discountPrice": "",
     "discountRate": "",

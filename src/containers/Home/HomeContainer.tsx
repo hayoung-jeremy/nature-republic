@@ -13,6 +13,7 @@ import productInfos from "db/product.json";
 // custom :
 import { SectionTemplate } from "components";
 import { CardTemplate } from "components";
+import { CustomSwiperContainer } from "components";
 
 SwiperCore.use([Virtual, Navigation, Pagination]);
 
@@ -20,37 +21,22 @@ const HomeContainer = () => {
   return (
     <>
       <SectionTemplate hasInner h2Content="main banner" isH2Blind>
-        <Swiper
+        <CustomSwiperContainer
+          data={bannerImages}
           slidesPerView={1}
-          virtual
-          pagination={{
-            el: ".custom-swiper-pagination",
-            clickable: true,
-          }}
-          navigation={{
-            nextEl: ".custom-swiper-button-next",
-            prevEl: ".custom-swiper-button-prev",
-          }}
-          className="round"
-        >
-          {bannerImages.map((item, index) => {
-            return (
-              <SwiperSlide key={item.id} virtualIndex={index} className="round">
-                <img src={item.url} alt={item.alt} />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-        <div className="custom-swiper-button-prev"></div>
-        <div className="custom-swiper-button-next"></div>
-        <div className="custom-swiper-pagination"></div>
+          pagination={{ clickable: true }}
+          navigation
+        ></CustomSwiperContainer>
       </SectionTemplate>
-      <SectionTemplate hasInner h2Content="신제품 & 베스트셀러" grayBackground>
+      <SectionTemplate hasInner h2Content="신제품 & 베스트셀러">
         <Swiper
           slidesPerView={4}
           spaceBetween={20}
           virtual
-          navigation
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
           className="forBoxShadow"
         >
           {productInfos.map((item, index) => {
@@ -70,6 +56,8 @@ const HomeContainer = () => {
             );
           })}
         </Swiper>
+        <div className="swiper-button-prev"></div>
+        <div className="swiper-button-next"></div>
       </SectionTemplate>
       <SectionTemplate hasInner h2Content="추천 카테고리"></SectionTemplate>
       <SectionTemplate hasInner h2Content="EVENT"></SectionTemplate>
