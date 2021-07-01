@@ -82,6 +82,10 @@ const CardBox = styled.div<Props>`
     }
     & .price-info {
       text-align: right;
+      & > span:last-child {
+        font-size: 20px;
+        font-weight: 600;
+      }
     }
     & .discount-price {
       font-size: 14px;
