@@ -87,10 +87,17 @@ const CardBox = styled.div<Props>`
         font-weight: 600;
       }
     }
-    & .discount-price {
+    & .cost-price.line-through {
       font-size: 14px;
       text-decoration: line-through;
       margin-right: 12px;
+    }
+    & .button-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      background-color: rgba(0, 0, 0, 0.2);
     }
   }
   // dimmed
@@ -147,12 +154,18 @@ const CardTemplate = ({
       <div className="preview-box">
         <p className="product-title">{productName}</p>
         <div className="price-info">
-          {discountPrice && (
-            <span className="discount-price">
-              {slicingPrice(discountPrice)}
-            </span>
+          {discountPrice ? (
+            <>
+              <span className="cost-price line-through">
+                {slicingPrice(costPrice)}
+              </span>
+              <span className="discount-price">
+                {slicingPrice(discountPrice)}
+              </span>
+            </>
+          ) : (
+            <span className="cost-price">{slicingPrice(costPrice)}</span>
           )}
-          <span className="cost-price">{slicingPrice(costPrice)}</span>
         </div>
       </div>
       <div className="dimmed"></div>
