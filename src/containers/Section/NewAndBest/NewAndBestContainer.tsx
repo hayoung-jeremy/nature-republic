@@ -7,7 +7,7 @@ import "swiper/components/pagination/pagination.scss";
 import "assets/styles/main.scss";
 
 // data :
-import productInfos from "db/product.json";
+import productInfos from "db/newAndBest.json";
 
 // custom :
 import { SectionTemplate } from "components";
