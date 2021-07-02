@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "components";
 
 interface Props {
   children?: React.ReactNode;
@@ -96,8 +97,7 @@ const CardBox = styled.div<Props>`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 12px;
-      background-color: rgba(0, 0, 0, 0.2);
+      margin-top: 16px;
     }
   }
   // dimmed
@@ -166,6 +166,14 @@ const CardTemplate = ({
           ) : (
             <span className="cost-price">{slicingPrice(costPrice)}</span>
           )}
+        </div>
+        <div className="button-box">
+          <Button size="medium" rounded outline>
+            장바구니
+          </Button>
+          <Button size="medium" rounded outline>
+            위시리스트
+          </Button>
         </div>
       </div>
       <div className="dimmed"></div>
