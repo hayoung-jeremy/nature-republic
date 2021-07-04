@@ -14,6 +14,14 @@ import { SectionTemplate } from "components";
 
 SwiperCore.use([Virtual, Navigation, Pagination]);
 
+const swiperContents = bannerImages.map((item, index) => {
+  return (
+    <SwiperSlide key={item.id} virtualIndex={index}>
+      <img src={item.url} alt={item.alt} />
+    </SwiperSlide>
+  );
+});
+
 const MainBannerContainer = () => {
   return (
     <SectionTemplate hasInner h2Content="main banner" isH2Blind>
@@ -26,13 +34,7 @@ const MainBannerContainer = () => {
         }}
         pagination
       >
-        {bannerImages.map((item, index) => {
-          return (
-            <SwiperSlide key={item.id} virtualIndex={index}>
-              <img src={item.url} alt={item.alt} />
-            </SwiperSlide>
-          );
-        })}
+        {swiperContents}
       </Swiper>
       <div className="swiper-button-prev custom"></div>
       <div className="swiper-button-next custom"></div>

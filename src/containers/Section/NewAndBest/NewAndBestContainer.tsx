@@ -15,6 +15,23 @@ import { CardTemplate } from "components";
 
 SwiperCore.use([Virtual, Navigation, Pagination]);
 
+const swiperContents = productInfos.map((item, index) => {
+  return (
+    <SwiperSlide key={item.id} virtualIndex={index}>
+      <CardTemplate
+        productName={item.productName}
+        productThumbnailUrl={item.productThumbnailUrl}
+        costPrice={item.costPrice}
+        discountPrice={item.discountPrice}
+        discountRate={item.discountRate}
+        isNew={item.isNew}
+        isBest={item.isBest}
+        isOnSale={item.isOnSale}
+      ></CardTemplate>
+    </SwiperSlide>
+  );
+});
+
 const NewAndBestContainer = () => {
   return (
     <SectionTemplate hasInner h2Content="신제품 & 베스트셀러">
@@ -29,22 +46,7 @@ const NewAndBestContainer = () => {
         }}
         grabCursor
       >
-        {productInfos.map((item, index) => {
-          return (
-            <SwiperSlide key={item.id} virtualIndex={index}>
-              <CardTemplate
-                productName={item.productName}
-                productThumbnailUrl={item.productThumbnailUrl}
-                costPrice={item.costPrice}
-                discountPrice={item.discountPrice}
-                discountRate={item.discountRate}
-                isNew={item.isNew}
-                isBest={item.isBest}
-                isOnSale={item.isOnSale}
-              ></CardTemplate>
-            </SwiperSlide>
-          );
-        })}
+        {swiperContents}
       </Swiper>
       <div className="swiper-button-prev custom2"></div>
       <div className="swiper-button-next custom2"></div>
