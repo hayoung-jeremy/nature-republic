@@ -15,6 +15,7 @@ interface commonProps {
   rounded?: boolean;
   outline?: boolean;
   disabled?: boolean;
+  grayToMain?: boolean;
 }
 
 const commonStyles = css<commonProps>`
@@ -43,6 +44,7 @@ const commonStyles = css<commonProps>`
 const colorStyles = css<commonProps>`
   ${({ theme, color }) => {
     const buttonColor = theme.palette[color!];
+    const grayScaledColor = theme.palette.grayScale;
     return css`
       background-color: ${buttonColor};
       &:hover {
@@ -60,7 +62,7 @@ const colorStyles = css<commonProps>`
       ${(props: commonProps) =>
         props.outline &&
         css`
-          color: ${darken(0.2, buttonColor)};
+          color: ${darken(0.12, buttonColor)};
           border: 1px solid ${buttonColor};
           background-color: ${rgba(buttonColor, 0)};
           &:hover {
@@ -68,6 +70,21 @@ const colorStyles = css<commonProps>`
           }
           &:active {
             background-color: ${darken(0.2, rgba(buttonColor, 0.1))};
+          }
+        `}
+      ${(props: commonProps) =>
+        props.grayToMain &&
+        css`
+          color: ${grayScaledColor};
+          border: 1px solid ${grayScaledColor};
+          background-color: transparent;
+          &:hover {
+            background-color: transparent;
+            color: ${darken(0.12, buttonColor)};
+            border: 1px solid ${darken(0.12, buttonColor)};
+          }
+          &:active {
+            background-color: ${darken(0.2, rgba(buttonColor, 0.05))};
           }
         `}
     `;
@@ -87,7 +104,7 @@ const sizes = {
   },
   small: {
     height: "24px",
-    fontSize: "11px",
+    fontSize: "10px",
     padding: "8px 12px",
   },
 };
@@ -142,6 +159,7 @@ const Button = ({
   fullWidth = false,
   rounded = false,
   outline = false,
+  grayToMain = false,
   ...rest
 }: commonProps) => {
   return isAnchor ? (
@@ -153,6 +171,7 @@ const Button = ({
       fullWidth={fullWidth}
       rounded={rounded}
       outline={outline}
+      grayToMain={grayToMain}
       {...rest}
     >
       {children}
@@ -165,6 +184,7 @@ const Button = ({
       fullWidth={fullWidth}
       rounded={rounded}
       outline={outline}
+      grayToMain={grayToMain}
       {...rest}
     >
       {children}

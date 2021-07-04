@@ -5,7 +5,7 @@ interface Props {
   children?: React.ReactNode;
   productName?: string;
   productThumbnailUrl?: string;
-  costPrice?: number;
+  costPrice?: number | string;
   discountPrice?: number | string;
   discountRate?: number | string;
   isNew?: boolean | string;
@@ -128,8 +128,8 @@ const CardBox = styled.div<Props>`
   }
 `;
 
-const slicingPrice = (price: number | string | undefined): void | any => {
-  return price?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+const slicingPrice = (price: number | string | undefined): string => {
+  return price!.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
 const CardTemplate = ({
@@ -168,10 +168,10 @@ const CardTemplate = ({
           )}
         </div>
         <div className="button-box">
-          <Button size="medium" rounded outline>
+          <Button size="medium" rounded outline grayToMain>
             장바구니
           </Button>
-          <Button size="medium" rounded outline>
+          <Button size="medium" rounded outline grayToMain>
             위시리스트
           </Button>
         </div>
