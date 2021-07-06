@@ -6,6 +6,9 @@ import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "assets/styles/main.scss";
 
+// uuid
+import { v4 as uuid_v4 } from "uuid";
+
 // data :
 import productInfos from "db/newAndBest.json";
 
@@ -17,7 +20,7 @@ SwiperCore.use([Virtual, Navigation, Pagination]);
 
 const swiperContents = productInfos.map((item, index) => {
   return (
-    <SwiperSlide key={item.id} virtualIndex={index}>
+    <SwiperSlide key={uuid_v4()} virtualIndex={index}>
       <CardTemplate
         productName={item.productName}
         productThumbnailUrl={item.productThumbnailUrl}
@@ -44,7 +47,6 @@ const NewAndBestContainer = () => {
           prevEl: ".swiper-button-prev.custom2",
           nextEl: ".swiper-button-next.custom2",
         }}
-        grabCursor
       >
         {swiperContents}
       </Swiper>
