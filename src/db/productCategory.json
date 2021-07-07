@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "productName": "캘리포니아 알로에 보송 선블럭 SPF50+ PA++++",
+    "productThumbnailUrl": "/images/newItem/new-item-1.png",
+    "costPrice": "15900",
+    "discountPrice": "10900",
+    "discountRate": "",
+    "category": "SUN",
+    "isNew": true,
+    "isBest": false,
+    "isOnSale": true
+  },
+  {
+    "id": 2,
+    "productName": "캘리포니아 알로에 보송 선스틱",
+    "productThumbnailUrl": "/images/newItem/new-item-1.png",
+    "costPrice": "39800",
+    "discountPrice": "19900",
+    "discountRate": "",
+    "category": "SUN",
+    "isNew": true,
+    "isBest": false,
+    "isOnSale": true
+  },
+  {
+    "id": 3,
+    "productName": "캘리포니아 알로에 점보 선로션 SPF50+ PA++++",
+    "productThumbnailUrl": "/images/newItem/new-item-1.png",
+    "costPrice": "18900",
+    "discountPrice": "13900",
+    "discountRate": "",
+    "category": "SUN",
+    "isNew": true,
+    "isBest": false,
+    "isOnSale": true
+  },
+  {
+    "id": 4,
+    "productName": "캘리포니아 알로에 아이스 퍼프선 SPF50+ PA++++",
+    "productThumbnailUrl": "/images/newItem/new-item-1.png",
+    "costPrice": "19900",
+    "discountPrice": "",
+    "discountRate": "",
+    "category": "SUN",
+    "isNew": true,
+    "isBest": false,
+    "isOnSale": true
+  },
+  {
+    "id": 5,
+    "productName": "수딩 앤 모이스처 알로에 베라 92% 수딩 젤 (튜브)",
+    "productThumbnailUrl": "/images/newItem/new-item-1.png",
+    "costPrice": "4900",
+    "discountPrice": "",
+    "discountRate": "",
+    "category": "기초",
+    "isNew": true,
+    "isBest": false,
+    "isOnSale": true
+  },
+  {
+    "id": 6,
+    "productName": "수딩 앤 모이스처 알로에베라 92% 수딩젤",
+    "productThumbnailUrl": "/images/newItem/new-item-1.png",
+    "costPrice": "4400",
+    "discountPrice": "",
+    "discountRate": "",
+    "category": "기초",
+    "isNew": true,
+    "isBest": false,
+    "isOnSale": true
+  },
+  {
+    "id": 7,
+    "productName": "캘리포니아 알로에 점보 선로션 SPF50+ PA++++",
+    "productThumbnailUrl": "/images/newItem/new-item-1.png",
+    "costPrice": "18900",
+    "discountPrice": "13900",
+    "discountRate": "",
+    "category": "기초",
+    "isNew": true,
+    "isBest": false,
+    "isOnSale": true
+  },
+  {
+    "id": 8,
+    "productName": "캘리포니아 알로에 아이스 퍼프선 SPF50+ PA++++",
+    "productThumbnailUrl": "/images/newItem/new-item-1.png",
+    "costPrice": "19900",
+    "discountPrice": "",
+    "discountRate": "",
+    "category": "기초",
+    "isNew": true,
+    "isBest": false,
+    "isOnSale": true
+  }
+]
