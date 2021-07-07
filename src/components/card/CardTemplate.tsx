@@ -168,10 +168,10 @@ const CardTemplate = ({
           )}
         </div>
         <div className="button-box">
-          <Button size="medium" rounded outline grayToMain>
+          <Button size="medium" grayToMain>
             장바구니
           </Button>
-          <Button size="medium" rounded outline grayToMain>
+          <Button size="medium" grayToMain>
             위시리스트
           </Button>
         </div>

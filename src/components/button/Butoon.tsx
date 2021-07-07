@@ -16,6 +16,7 @@ interface commonProps {
   outline?: boolean;
   disabled?: boolean;
   grayToMain?: boolean;
+  textButton?: boolean;
 }
 
 const commonStyles = css<commonProps>`
@@ -72,11 +73,13 @@ const colorStyles = css<commonProps>`
             background-color: ${darken(0.2, rgba(buttonColor, 0.1))};
           }
         `}
+
+      // grayToMain
       ${(props: commonProps) =>
         props.grayToMain &&
         css`
           color: ${grayScaledColor};
-          border: 1px solid ${grayScaledColor};
+          border: 1px solid ${lighten(0.3, grayScaledColor)};
           background-color: transparent;
           &:hover {
             background-color: transparent;
@@ -85,6 +88,16 @@ const colorStyles = css<commonProps>`
           }
           &:active {
             background-color: ${darken(0.2, rgba(buttonColor, 0.05))};
+          }
+        `} 
+        // textButton
+        ${(props: commonProps) =>
+        props.textButton &&
+        css`
+          color: ${buttonColor};
+          background-color: transparent;
+          &:hover {
+            background-color: ${darken(0.05, rgba(buttonColor, 0.08))};
           }
         `}
     `;
@@ -160,6 +173,7 @@ const Button = ({
   rounded = false,
   outline = false,
   grayToMain = false,
+  textButton = false,
   ...rest
 }: commonProps) => {
   return isAnchor ? (
@@ -172,6 +186,7 @@ const Button = ({
       rounded={rounded}
       outline={outline}
       grayToMain={grayToMain}
+      textButton={textButton}
       {...rest}
     >
       {children}
@@ -185,6 +200,7 @@ const Button = ({
       rounded={rounded}
       outline={outline}
       grayToMain={grayToMain}
+      textButton={textButton}
       {...rest}
     >
       {children}
